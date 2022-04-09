@@ -15,10 +15,22 @@ class LinkedList:
             print("Linked List si empty")
             return
 
+        itr = self.head
+        llstr = ''
 
+        while itr:
+            llstr += str(itr.data) + '-->'
+        llstr = itr.next
 
+        print(llstr)
 
+    def insert_at_end(self, data):
+        if self.head is None:
+            self.head = Node(data, None)
+            return
 
-
-if __name__=='__main__':
-    pass
+if __name__== '__main__':
+    ll = LinkedList()
+    ll.instert_at_begining(5)
+    ll.insert_at_begining(89)
+    ll.print()
